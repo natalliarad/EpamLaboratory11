@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/recycler_view_example"
+            android:icon="@drawable/ic_recycler_24dp"
+            android:title="@string/list_via_a_recyclerview" />
+        <item
+            android:id="@+id/list_view_example"
+            android:icon="@drawable/ic_list_24dp"
+            android:title="List via a ListView" />
+    </group>
+</menu>

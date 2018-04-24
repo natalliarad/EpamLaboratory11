@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">EpamLabRecyclerAndListView</string>
+    <string name="list_via_a_recyclerview">List via a RecyclerView</string>
+    <string name="beautiful_islands">Beautiful Islands</string>
+    <string name="open_drawer">Open navigation menu</string>
+    <string name="close_drawer">Close navigation menu</string>
+    <string name="place_title_text_view">Place name</string>
+    <string name="coordinates">Coordinates</string>
+    <string name="imageSrc">Telephone</string>
+    <string name="opening_hours">Opening hours</string>
+    <string name="rating">Rating</string>
+    <string name="category">Category</string>
+    <string name="description">Description</string>
+    <string name="save">Save</string>
+    <!-- The class name to the ScrollingChildBehavior required for AppBarLayout -->
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="open_list_example">Open an Example of the ListView</string>
+    <string name="open_recycler_example">Open Example of the RecyclerView</string>
+</resources>
