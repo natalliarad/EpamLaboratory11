@@ -7,5 +7,10 @@
 <p>The example of using the ListView. Displays a list of islands on the mobile and tablet devices.</p>
 <p align="center">
   <img padding="24px" src="https://github.com/natalliarad/EpamLaboratory11/blob/master/listView_mobile.png" width="200"/>
-  <img padding="24px" src="https://github.com/natalliarad/EpamLaboratory11/blob/master/listView_tablet.png" width="280"/>
+  <img padding="24px" src="https://github.com/natalliarad/EpamLaboratory11/blob/master/listView_tablet.png" width="270"/>
+</p>
+<p>The example of using the RecyclerView. Displays a list of islands on the mobile and tablet devices (portrait mode).</p>
+<p align="center">
+  <img padding="24px" src="https://github.com/natalliarad/EpamLaboratory11/blob/master/recycler_mobile.png" width="200"/>
+  <img padding="24px" src="https://github.com/natalliarad/EpamLaboratory11/blob/master/recycler_tablet.png" width="270"/>
 </p>
