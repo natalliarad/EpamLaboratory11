@@ -7,15 +7,15 @@
 <p>The example of using the ListView. Displays a list of islands on the mobile and tablet devices.</p>
 <p align="center">
   <img padding="24px" src="https://github.com/natalliarad/EpamLaboratory11/blob/master/listView_mobile.png" width="200"/>
-  <img padding="24px" src="https://github.com/natalliarad/EpamLaboratory11/blob/master/listView_tablet.png" width="265"/>
+  <img padding="24px" src="https://github.com/natalliarad/EpamLaboratory11/blob/master/listView_tablet.png" width="268"/>
 </p>
 <p>The example of using the RecyclerView. Displays a list of islands on the mobile and tablet devices (portrait mode).</p>
 <p align="center">
   <img padding="24px" src="https://github.com/natalliarad/EpamLaboratory11/blob/master/recycler_mobile.png" width="200"/>
-  <img padding="24px" src="https://github.com/natalliarad/EpamLaboratory11/blob/master/recycler_tablet.png" width="265"/>
+  <img padding="24px" src="https://github.com/natalliarad/EpamLaboratory11/blob/master/recycler_tablet.png" width="268"/>
 </p>
-<p>The example of using the RecyclerView. Displays a list of islands on tablet devices in landscape mode. It is implemented "master-detail" mode.</p>
+<p>The example of using the RecyclerView. Displays a list of islands on the mobile and tablet devices devices in landscape mode. It is implemented "master-detail" mode.</p>
 <p align="center">
-  <img padding="24px" src="https://github.com/natalliarad/EpamLaboratory11/blob/master/recycler_detail_tablet_1.png" width="200"/>
-  <img padding="24px" src="https://github.com/natalliarad/EpamLaboratory11/blob/master/recycler_detail_tablet_2.png" width="265"/>
+  <img padding="24px" src="https://github.com/natalliarad/EpamLaboratory11/blob/master/recycler_detail_tablet_1.png" width="300"/>
+  <img padding="24px" src="https://github.com/natalliarad/EpamLaboratory11/blob/master/recycler_detail_tablet_2.png" width="300"/>
 </p>
