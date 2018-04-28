@@ -2,7 +2,6 @@ package com.natallia.radaman.epamlabrecyclerandlistview;
 
 import android.content.Context;
 import android.content.res.Configuration;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -13,7 +12,6 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -23,9 +21,8 @@ import android.widget.Toast;
 import com.natallia.radaman.epamlabrecyclerandlistview.Model.Place;
 import com.natallia.radaman.epamlabrecyclerandlistview.Model.PlaceList;
 import com.natallia.radaman.epamlabrecyclerandlistview.interfaces.FragmentCoordinator;
+import com.squareup.picasso.Picasso;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 
 /**
@@ -138,23 +135,8 @@ public class FragmentRecyclerView extends Fragment {
             holder.coordinatesTextView.setText(placeList.get(holder.getAdapterPosition()).getCoordinates());
             holder.ratingTextView.setText(String.valueOf(placeList.get(holder.getAdapterPosition())
                     .getRating()));
-            InputStream inputStream = null;
-            try {
-                inputStream = context.getApplicationContext().getAssets().open(placeList.get
-                        (holder.getAdapterPosition()).getImageSrc());
-                Drawable drawable = Drawable.createFromStream(inputStream, null);
-                holder.itemImageView.setImageDrawable(drawable);
-                holder.itemImageView.setScaleType(ImageView.ScaleType.FIT_XY);
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            } finally {
-                try {
-                    if (inputStream != null)
-                        inputStream.close();
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
-            }
+            Picasso.get().load(placeList.get(holder.getAdapterPosition()).getImageSrc()).into
+                    (holder.itemImageView);
             holder.itemCardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

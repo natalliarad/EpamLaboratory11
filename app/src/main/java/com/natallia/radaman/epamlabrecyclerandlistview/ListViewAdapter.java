@@ -2,7 +2,6 @@ package com.natallia.radaman.epamlabrecyclerandlistview;
 
 import android.content.Context;
 import android.content.res.Configuration;
-import android.graphics.drawable.Drawable;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
@@ -14,9 +13,8 @@ import android.widget.TextView;
 
 import com.natallia.radaman.epamlabrecyclerandlistview.Model.Place;
 import com.natallia.radaman.epamlabrecyclerandlistview.interfaces.FragmentCoordinator;
+import com.squareup.picasso.Picasso;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 
 public class ListViewAdapter extends BaseAdapter implements View.OnClickListener {
@@ -65,23 +63,8 @@ public class ListViewAdapter extends BaseAdapter implements View.OnClickListener
         titleTextView.setText(placeList.get(position).getTitle());
         addressTextView.setText(placeList.get(position).getCoordinates());
         ratingTextView.setText(String.valueOf(placeList.get(position).getRating()));
-        InputStream inputStream = null;
-        try {
-            inputStream = context.getApplicationContext().getAssets().open(placeList.get
-                    (position).getImageSrc());
-            Drawable drawable = Drawable.createFromStream(inputStream, null);
-            itemImageView.setImageDrawable(drawable);
-            itemImageView.setScaleType(ImageView.ScaleType.FIT_XY);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        } finally {
-            try {
-                if (inputStream != null)
-                    inputStream.close();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-        }
+        Picasso.get().load(placeList.get(position).getImageSrc()).into
+                (itemImageView);
         itemCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

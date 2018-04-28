@@ -1,7 +1,6 @@
 package com.natallia.radaman.epamlabrecyclerandlistview;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -16,9 +15,8 @@ import android.widget.TextView;
 import com.natallia.radaman.epamlabrecyclerandlistview.Model.Place;
 import com.natallia.radaman.epamlabrecyclerandlistview.Model.PlaceList;
 import com.natallia.radaman.epamlabrecyclerandlistview.interfaces.FragmentCoordinator;
+import com.squareup.picasso.Picasso;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 
 public class PlaceDetailFragment extends Fragment {
@@ -72,22 +70,7 @@ public class PlaceDetailFragment extends Fragment {
 
     private void initUI(View view) {
         itemImageView = view.findViewById(R.id.place_main_image_view);
-        InputStream inputStream = null;
-        try {
-            inputStream = getContext().getAssets().open(places.get(currentIndex).getImageSrc());
-            Drawable drawable = Drawable.createFromStream(inputStream, null);
-            itemImageView.setImageDrawable(drawable);
-            itemImageView.setScaleType(ImageView.ScaleType.FIT_XY);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        } finally {
-            try {
-                if (inputStream != null)
-                    inputStream.close();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-        }
+        Picasso.get().load(places.get(currentIndex).getImageSrc()).into(itemImageView);
 
         titleTextView = view.findViewById(R.id.place_title);
         titleTextView.setText(places.get(currentIndex).getTitle());
